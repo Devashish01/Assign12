@@ -1,4 +1,3 @@
-
 import java.util.InputMismatchException;
 import java.util.Scanner;
 public class File1 {
@@ -61,8 +60,8 @@ public class File1 {
            public void set(int index, int element) {
 
                    if (index > nextIndex) {
-                    throw new ArrayIndexOutOfBoundsException("Index out of bound");
-                    
+                    //throw new ArrayIndexOutOfBoundsException("Index out of bound");
+                	   add(element);
                    } 
                    else if (index == nextIndex) {
                            add(element);
@@ -105,6 +104,11 @@ public class File1 {
                 catch(InputMismatchException e){
                         System.out.println("THis not in array");
                 }		
-		
+		obj.set(6, 101);
+		int nn=obj.get(obj.size()-1);
+        if(nn==-1)
+            throw new InputMismatchException();
+        else
+        	System.out.println(nn);
 	}
 }
